@@ -11,7 +11,7 @@ We count Fibonacci numbers beginning with the first 1. Take a look at the
 examples below if you're unsure where to start!
 
 Examples:
-
+//
 fibonacci(1); // 1
 fibonacci(2); // 1
 fibonacci(3); // 2
@@ -22,7 +22,6 @@ fibonacci(10); // 55
 function fibonacci(n) {
   // Your code here
 }
-  
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = fibonacci;
-  

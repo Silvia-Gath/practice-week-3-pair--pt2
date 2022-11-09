@@ -12,10 +12,22 @@ flatten([1, 2]); // [1, 2]
 flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
-function flatten(arr) {
-  // Your code here
+function flatten(arr, newArr = []) {
+  if (arr.length === 0) return arr;
+
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      return flatten(item, newArr);
+    } else {
+      newArr.push(item);
+    }
+  });
+
+  return newArr;
 }
-  
+
+console.log(flatten([])); // []
+console.log(flatten([1, 2])); // [1, 2]
+console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
-  
